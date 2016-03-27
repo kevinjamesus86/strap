@@ -1,12 +1,15 @@
-@import (reference) "./base";
-
 @charset "utf-8";
-
 @-webkit-viewport { width: device-width }
 @-moz-viewport { width: device-width }
 @-ms-viewport { width: device-width }
 @-o-viewport { width: device-width }
 @viewport { width: device-width }
+
+
+////////////////////////
+// opinionated defaults?
+////////////////////////
+
 
 *,
 *::after,
@@ -24,7 +27,7 @@ html {
     font-size: 13px;
     min-width: 320px;
     box-sizing: border-box;
-    background-color: @off-white;
+    background-color: #f3f5f7;
 }
 
 body {
@@ -68,6 +71,12 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; /* Removes leftover margin */
 }
 
+
+//////////////////
+// angular-csp.css
+//////////////////
+
+
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
 .ng-cloak, .x-ng-cloak,
 .ng-hide:not(.ng-hide-animate) {
@@ -85,3 +94,8 @@ ng\:form {
 .ng-anchor {
   position:absolute;
 }
+
+
+//////////////////////////////////
+// import component less files hur
+//////////////////////////////////
