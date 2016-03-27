@@ -1,0 +1,87 @@
+@import (reference) "./base";
+
+@charset "utf-8";
+
+@-webkit-viewport { width: device-width }
+@-moz-viewport { width: device-width }
+@-ms-viewport { width: device-width }
+@-o-viewport { width: device-width }
+@viewport { width: device-width }
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 13px;
+    min-width: 320px;
+    box-sizing: border-box;
+    background-color: @off-white;
+}
+
+body {
+    color: #323a45;
+    font: 400 1em/1.5 "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    cursor: default;
+}
+
+/* contain margins */
+body::after,
+body::before {
+    content: " ";
+    display: table;
+}
+
+button,
+[type=text],
+[type=number],
+[type=search],
+textarea {
+    font: inherit;
+    color: inherit;
+}
+
+a {
+    font: inherit;
+    text-decoration: none;
+}
+
+/* Remove controls from Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Remove controls from Safari and Chrome */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* Removes leftover margin */
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
+.ng-cloak, .x-ng-cloak,
+.ng-hide:not(.ng-hide-animate) {
+  display: none !important;
+}
+
+ng\:form {
+  display: block;
+}
+
+.ng-animate-shim {
+  visibility:hidden;
+}
+
+.ng-anchor {
+  position:absolute;
+}

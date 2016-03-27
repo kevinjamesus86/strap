@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>strap</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css">
+    <link rel="stylesheet" href="app/src/main.less">
+</head>
+
+<body ng-csp>
+
+    <main>
+
+        <h1>yup</h1>
+        <p>
+            this is <strong>it</strong>
+        </p>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.0/es6-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js"></script>
+    <script>
+        require(['app/require/rconf'], function(config) {
+            'use strict';
+
+            require.config(config);
+
+            require([
+                'angular',
+                'app/main'
+            ], function bootstrapApp(angular, main) {
+                angular.bootstrap(document.body, [main.name]);
+            });
+
+        });
+    </script>
+</body>
+
+</html>
