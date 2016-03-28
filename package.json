@@ -10,6 +10,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "chalk": "^1.1.1",
     "less": "^2.6.1",
     "lite-server": "^2.1.0"
   }
