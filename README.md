@@ -21,7 +21,7 @@ Feel free to `bower i -S <dependency>` and require it into a module. Por ejemplo
 
 ```sh
 # install and save jquery as a dependency
-bower i -D jquery
+bower i -S jquery
 ```
 
 and then
