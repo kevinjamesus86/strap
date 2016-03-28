@@ -1,20 +1,9 @@
-define([
-    'angular',
-    'ngComponentRouter'
-], function defineMain(
-    angular,
-    ngComponentRouter
-) {
+define(function defineMain() {
     'use strict';
 
-    var module = angular.module('strap', [
-        ngComponentRouter.name
-    ]);
-
-    module.config(['$compileProvider', function($compileProvider) {
-        $compileProvider.onChangesTtl(5);
-        $compileProvider.debugInfoEnabled(false);
-    }]);
-
-    return module;
+    return {
+        strap: function() {
+            document.querySelector('#strap').textContent = 'Hey thur';
+        }
+    };
 });

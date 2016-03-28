@@ -1,23 +1,20 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>strap</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css">
     <link rel="stylesheet" href="app/src/main.less">
 </head>
-
-<body ng-csp>
+<body>
 
     <main>
 
-        <h1>yup</h1>
-        <p>
-            this is <strong>it</strong>
-        </p>
+        <h1 id="strap">
+            loading&hellip;
+        </h1>
 
     </main>
 
@@ -29,15 +26,12 @@
 
             require.config(config);
 
-            require([
-                'angular',
-                'app/main'
-            ], function bootstrapApp(angular, main) {
-                angular.bootstrap(document.body, [main.name]);
+            require(['app/main'], function bootstrapApp(main) {
+                // say hi
+                main.strap();
             });
 
         });
     </script>
 </body>
-
 </html>
