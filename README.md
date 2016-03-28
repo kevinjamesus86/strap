@@ -9,7 +9,7 @@ git clone https://github.com/kevinjamesus86/strap.git <new name>.. for crafting
 git clone https://github.com/kevinjamesus86/strap.git <such great project>
 
 # install dependencies
-npm i
+npm i && bower i
 
 # and serve
 npm run dev
