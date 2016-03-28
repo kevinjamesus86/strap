@@ -30,7 +30,6 @@ module.exports = function(bs) {
             }
         ],
         server: {
-            index: 'app/src/index.html',
             middleware: {
                 2: lessMiddleware
             }
