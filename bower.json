@@ -1,13 +1,7 @@
 {
   "name": "strap",
-  "authors": [
-    "Kevin James <kevinjamesus86@gmail.com>"
-  ],
   "description": "because I can",
-  "main": "",
-  "moduleType": [],
   "license": "MIT",
-  "homepage": "",
   "private": true,
   "ignore": [
     "**/.*",
@@ -15,7 +9,8 @@
     "app/components",
     "app/bower_components",
     "test",
-    "tests"
+    "tests",
+    "typings"
   ],
   "dependencies": {
     "normalize-css": "^4.0.0"

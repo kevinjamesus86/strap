@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>strap</title>
+    <title>strap-ng2</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic">
     <link rel="stylesheet" href="app/src/main.less">
 </head>
@@ -12,26 +12,39 @@
 
     <main>
 
-        <h1 id="strap">
+        <h1>
             loading&hellip;
         </h1>
 
     </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.0/es6-shim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js"></script>
+    <!-- 1. Load libraries -->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+    <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+
+    <!-- 2. Configure SystemJS -->
     <script>
-        require(['app/require/rconf'], function(config) {
-            'use strict';
 
-            require.config(config);
-
-            require(['app/main'], function bootstrapApp(main) {
-                // say hi
-                main.strap();
-            });
-
+        System.config({
+            packages: {
+                app: {
+                    format: 'register',
+                    defaultExtension: 'js'
+                }
+            }
         });
+
+        System.import('app/src/main').then(null, function() {
+            console.error.apply(console, arguments);
+        });
+
     </script>
 </body>
 </html>

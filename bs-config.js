@@ -15,9 +15,8 @@ module.exports = function(bs) {
         ],
         files: [
             'app/src/**/*.{html,json,js}',
-            'app/require/*.js',
             'index.html', {
-                match: '**/*.{css,less}',
+                match: 'app/**/*.{css,less}',
                 options: {
                     ignoreInitial: true
                 },
