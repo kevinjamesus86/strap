@@ -1,12 +1,12 @@
 # strap
-git clone https://github.com/kevinjamesus86/strap.git <new name>.. for crafting
+`git clone -b angular --single-branch https://github.com/kevinjamesus86/strap.git <new-name>` for crafting
 
 
 **do this**
 
 ```sh
-# clone under new name
-git clone https://github.com/kevinjamesus86/strap.git <such great project>
+# clone angular branch
+git clone -b angular --single-branch https://github.com/kevinjamesus86/strap.git <new-name>
 
 # install dependencies
 npm i && bower i
