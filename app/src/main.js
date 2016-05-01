@@ -1,15 +1,11 @@
 define([
-    'angular',
-    'ngComponentRouter'
+    'angular'
 ], function defineMain(
-    angular,
-    ngComponentRouter
+    angular
 ) {
     'use strict';
 
-    var module = angular.module('strap', [
-        ngComponentRouter.name
-    ]);
+    var module = angular.module('strap', []);
 
     module.config([
         '$compileProvider',

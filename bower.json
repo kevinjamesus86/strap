@@ -18,6 +18,6 @@
     "tests"
   ],
   "dependencies": {
-    "normalize-css": "^4.0.0"
+    "normalize-css": "^4.1.1"
   }
 }

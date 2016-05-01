@@ -20,10 +20,10 @@ define({
             return angular.module('ngCookies');
         }
     },
-    ngComponentRouter: {
+    ngRoute: {
         deps: ['angular'],
         init: function(angular) {
-            return angular.module('ngComponentRouter');
+            return angular.module('ngRoute');
         }
     },
     ngResource: {

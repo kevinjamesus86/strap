@@ -12,6 +12,6 @@
   "devDependencies": {
     "chalk": "^1.1.1",
     "less": "^2.6.1",
-    "lite-server": "github:kevinjamesus86/lite-server#expose-instance"
+    "lite-server": "^2.2.0"
   }
 }
